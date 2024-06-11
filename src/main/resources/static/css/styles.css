@@ -22,7 +22,12 @@ body {
     margin: 30px 50px;
     line-height: 1.4;
 }
-
+.invalid-feedback {
+    color: #ffffff; /* White text */
+    background-color: #dc3545; /* Red background */
+    padding: 5px;
+    border-radius: 5px;
+}
 .btn {
     background: var(--dark);
     color: var(--light);
