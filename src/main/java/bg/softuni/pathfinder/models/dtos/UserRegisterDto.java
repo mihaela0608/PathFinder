@@ -1,5 +1,6 @@
 package bg.softuni.pathfinder.models.dtos;
 
+import bg.softuni.pathfinder.models.enums.Level;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;
 
@@ -22,6 +23,15 @@ public class UserRegisterDto {
     @Email
     private String email;
     private String confirmPassword;
+    private String level;
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
 
     public String getConfirmPassword() {
         return confirmPassword;

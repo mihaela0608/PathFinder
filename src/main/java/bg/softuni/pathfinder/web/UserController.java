@@ -1,6 +1,7 @@
 package bg.softuni.pathfinder.web;
 
 import bg.softuni.pathfinder.models.dtos.UserRegisterDto;
+import bg.softuni.pathfinder.models.enums.Level;
 import bg.softuni.pathfinder.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ public class UserController {
         if (!model.containsAttribute("userRegisterDto")){
             model.addAttribute("userRegisterDto", new UserRegisterDto());
         }
+        model.addAttribute("levels", Level.values());
         return "register";
     }
 

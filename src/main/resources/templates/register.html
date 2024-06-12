@@ -106,6 +106,22 @@
                 </div>
                 <div>
                     <div class="col-auto">
+                        <label th:for="inputLevel" class="col-form-label ">Level</label>
+                    </div>
+                    <div class="col-auto">
+                        <select name="level"
+                               th:field="*{level}"
+                               type="level"
+                               id="inputLevel"
+                               class="form-control"
+                               aria-describedby="passwordHelpInline"
+                        >
+                            <option th:each="level : ${levels}" th:value="${level}" th:text="${level}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-auto">
                         <label for="inputPassword" class="col-form-label ">Password</label>
                     </div>
                     <div class="col-auto">
