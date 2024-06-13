@@ -1,5 +1,6 @@
 package bg.softuni.pathfinder.config;
 
+import bg.softuni.pathfinder.service.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,5 +17,10 @@ public class Config {
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public CurrentUser currentUser(){
+        return new CurrentUser();
     }
 }
